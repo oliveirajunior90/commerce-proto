@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package project.commerce.proto;
+
+import "google/protobuf/timestamp.proto";
+
+enum OrderStatusEnum {
+  PENDING = 0;
+  APPROVED = 1;
+  PREPARING = 2;
+  DELIVERED = 3;
+  CANCELED = 4;
+}
+
+message OrderItem {
+  string id = 1;
+  string name = 2;
+  int32 quantity = 3;
+  double price = 4;
+}
+
+message Order {
+  string id = 1;
+  string customer_name = 2;
+  string customer_email = 3;
+  OrderStatusEnum status = 4;
+  repeated OrderItem order_items = 7;
+}

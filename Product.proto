@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package project.commerce.proto;
+
+message Product {
+  int64 id = 1;
+  string name = 2;
+  string description = 3;
+  double price = 4;
+  string code = 5;
+  repeated ProductIngredient productIngredients = 6;
+}
+
+message ProductIngredient {
+  int64 id = 1;
+  double quantity = 2;
+}
