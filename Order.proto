@@ -20,7 +20,7 @@ message OrderItem {
 }
 
 message Order {
-  int64 id = 1;
+  string id = 1;
   string customer_name = 2;
   string customer_email = 3;
   OrderStatusEnum status = 4;
