@@ -4,6 +4,8 @@ package project.commerce.proto;
 
 import "google/protobuf/timestamp.proto";
 
+import "google/protobuf/decimal.proto";
+
 enum OrderStatusEnum {
   PENDING = 0;
   APPROVED = 1;
@@ -16,7 +18,7 @@ message OrderItem {
   int64 product_id = 1;
   string name = 2;
   int32 quantity = 3;
-  double price = 4;
+  google.type.Decimal price = 4;
 }
 
 message Order {
@@ -25,5 +27,5 @@ message Order {
   string customer_email = 3;
   OrderStatusEnum status = 4;
   repeated OrderItem order_items = 7;
-  string total_price = 8;
+  google.type.Decimal total_price = 8;
 }
