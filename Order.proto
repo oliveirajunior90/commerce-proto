@@ -4,7 +4,7 @@ package project.commerce.proto;
 
 import "google/protobuf/timestamp.proto";
 
-import "google/protobuf/decimal.proto";
+import "google/type/decimal.proto";
 
 enum OrderStatusEnum {
   PENDING = 0;
